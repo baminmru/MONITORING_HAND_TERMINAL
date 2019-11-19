@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsLastVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Version" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="subversion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TSDModel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsLastVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsLastVersionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrentTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCurrentTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TSDModel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TSDModel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Terminalid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCabResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLib">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LibName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibs">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLibsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsLastVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:IsLastVersion" />
+  </wsdl:message>
+  <wsdl:message name="IsLastVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:IsLastVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentTime" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetLastVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCabSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCab" />
+  </wsdl:message>
+  <wsdl:message name="GetCabSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCabResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLib" />
+  </wsdl:message>
+  <wsdl:message name="GetLibSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLibs" />
+  </wsdl:message>
+  <wsdl:message name="GetLibsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TSDUpdaterSoap">
+    <wsdl:operation name="IsLastVersion">
+      <wsdl:input message="tns:IsLastVersionSoapIn" />
+      <wsdl:output message="tns:IsLastVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTime">
+      <wsdl:input message="tns:GetCurrentTimeSoapIn" />
+      <wsdl:output message="tns:GetCurrentTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastVersion">
+      <wsdl:input message="tns:GetLastVersionSoapIn" />
+      <wsdl:output message="tns:GetLastVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCab">
+      <wsdl:input message="tns:GetCabSoapIn" />
+      <wsdl:output message="tns:GetCabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLib">
+      <wsdl:input message="tns:GetLibSoapIn" />
+      <wsdl:output message="tns:GetLibSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibs">
+      <wsdl:input message="tns:GetLibsSoapIn" />
+      <wsdl:output message="tns:GetLibsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TSDUpdaterSoap" type="tns:TSDUpdaterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsLastVersion">
+      <soap:operation soapAction="http://tempuri.org/IsLastVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTime">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastVersion">
+      <soap:operation soapAction="http://tempuri.org/GetLastVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCab">
+      <soap:operation soapAction="http://tempuri.org/GetCab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLib">
+      <soap:operation soapAction="http://tempuri.org/GetLib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibs">
+      <soap:operation soapAction="http://tempuri.org/GetLibs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TSDUpdaterSoap12" type="tns:TSDUpdaterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsLastVersion">
+      <soap12:operation soapAction="http://tempuri.org/IsLastVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTime">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetLastVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCab">
+      <soap12:operation soapAction="http://tempuri.org/GetCab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLib">
+      <soap12:operation soapAction="http://tempuri.org/GetLib" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibs">
+      <soap12:operation soapAction="http://tempuri.org/GetLibs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TSDUpdater">
+    <wsdl:port name="TSDUpdaterSoap" binding="tns:TSDUpdaterSoap">
+      <soap:address location="http://10.11.40.15:1085/CMMonitorService/TSDUpdater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TSDUpdaterSoap12" binding="tns:TSDUpdaterSoap12">
+      <soap12:address location="http://10.11.40.15:1085/CMMonitorService/TSDUpdater.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

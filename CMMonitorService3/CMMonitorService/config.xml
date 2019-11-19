@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config DataSource="OPC" UserID="opc" Password="uis"
+sapurl="http://pmapp11.powerm.ru:50000/XMII/Runner?Transaction=nsi/skti_sap/queue_tr_pdtv_bapi"
+sapuser="z028"
+sappassword="28tseh"
+logpath="E:\Projects\CM\log\CMMLOG"
+libpath="E:\Projects\CM\libs\"
+tablename="opc_lmz_indx_test"
+/>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegisterInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Brigada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterPodInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="QWORKERS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="STATUSID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="opPRC" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BRK" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WPChanged" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="QWORKERSChanged" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="STATUSChanged" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="opPRCChanged" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="BRKChanged" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterPodInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterPodInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewPod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewPodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewPodResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyPod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyPodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyPodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatusNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOPInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OpCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOPInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOPInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTerminalOperations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="terminalid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTerminalOperationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTerminalOperationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterInfo" />
+  </wsdl:message>
+  <wsdl:message name="RegisterInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPodInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterPodInfo" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPodInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterPodInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewPodSoapIn">
+    <wsdl:part name="parameters" element="tns:NewPod" />
+  </wsdl:message>
+  <wsdl:message name="NewPodSoapOut">
+    <wsdl:part name="parameters" element="tns:NewPodResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPodSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyPod" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPodSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyPodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatusName" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatusNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:AddStatus" />
+  </wsdl:message>
+  <wsdl:message name="AddStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:AddStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOPInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOPInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetOPInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOPInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalOperationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTerminalOperations" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalOperationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTerminalOperationsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CMMon2ServiceSoap">
+    <wsdl:operation name="RegisterInfo">
+      <wsdl:input message="tns:RegisterInfoSoapIn" />
+      <wsdl:output message="tns:RegisterInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPodInfo">
+      <wsdl:input message="tns:RegisterPodInfoSoapIn" />
+      <wsdl:output message="tns:RegisterPodInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewPod">
+      <wsdl:input message="tns:NewPodSoapIn" />
+      <wsdl:output message="tns:NewPodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPod">
+      <wsdl:input message="tns:VerifyPodSoapIn" />
+      <wsdl:output message="tns:VerifyPodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxStatus">
+      <wsdl:input message="tns:GetMaxStatusSoapIn" />
+      <wsdl:output message="tns:GetMaxStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusName">
+      <wsdl:input message="tns:GetStatusNameSoapIn" />
+      <wsdl:output message="tns:GetStatusNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStatus">
+      <wsdl:input message="tns:AddStatusSoapIn" />
+      <wsdl:output message="tns:AddStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPInfo">
+      <wsdl:input message="tns:GetOPInfoSoapIn" />
+      <wsdl:output message="tns:GetOPInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalOperations">
+      <wsdl:input message="tns:GetTerminalOperationsSoapIn" />
+      <wsdl:output message="tns:GetTerminalOperationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMMon2ServiceSoap" type="tns:CMMon2ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterInfo">
+      <soap:operation soapAction="http://tempuri.org/RegisterInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPodInfo">
+      <soap:operation soapAction="http://tempuri.org/RegisterPodInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewPod">
+      <soap:operation soapAction="http://tempuri.org/NewPod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPod">
+      <soap:operation soapAction="http://tempuri.org/VerifyPod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxStatus">
+      <soap:operation soapAction="http://tempuri.org/GetMaxStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusName">
+      <soap:operation soapAction="http://tempuri.org/GetStatusName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStatus">
+      <soap:operation soapAction="http://tempuri.org/AddStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPInfo">
+      <soap:operation soapAction="http://tempuri.org/GetOPInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalOperations">
+      <soap:operation soapAction="http://tempuri.org/GetTerminalOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CMMon2ServiceSoap12" type="tns:CMMon2ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterInfo">
+      <soap12:operation soapAction="http://tempuri.org/RegisterInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPodInfo">
+      <soap12:operation soapAction="http://tempuri.org/RegisterPodInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewPod">
+      <soap12:operation soapAction="http://tempuri.org/NewPod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPod">
+      <soap12:operation soapAction="http://tempuri.org/VerifyPod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetMaxStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusName">
+      <soap12:operation soapAction="http://tempuri.org/GetStatusName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStatus">
+      <soap12:operation soapAction="http://tempuri.org/AddStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetOPInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalOperations">
+      <soap12:operation soapAction="http://tempuri.org/GetTerminalOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMMon2Service">
+    <wsdl:port name="CMMon2ServiceSoap" binding="tns:CMMon2ServiceSoap">
+      <soap:address location="http://10.11.40.15:1083/CMMon2Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CMMon2ServiceSoap12" binding="tns:CMMon2ServiceSoap12">
+      <soap12:address location="http://10.11.40.15:1083/CMMon2Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

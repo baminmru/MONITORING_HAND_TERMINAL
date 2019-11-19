@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PARAM NAME="Parameters" VERSION="1.21.4" TYPE="NODE">
+<PARAM NAME="Reader Parameters" TYPE="NODE" id="0">
+<PARAM NAME="Text Formatting" TYPE="NODE">
+<PARAM NAME="Identifier" VALUE="None" TYPE="ENUM"  id="2"><ENUM NAME="None" VALUE="0"></ENUM><ENUM NAME="Datalogic bef. code" VALUE="1"></ENUM><ENUM NAME="Datalogic after code" VALUE="2"></ENUM><ENUM NAME="AIM bef.code" VALUE="3"></ENUM><ENUM NAME="AIM after code" VALUE="4"></ENUM>
+</PARAM>
+<PARAM NAME="Preamble" VALUE="" TYPE="STRING"  MIMETYPE="binHex" id="0">
+</PARAM>
+<PARAM NAME="Postamble" VALUE="" TYPE="STRING"  MIMETYPE="binHex" id="1">
+</PARAM>
+<PARAM NAME="Separator" VALUE="" TYPE="STRING"  MIMETYPE="binHex" id="8388863">
+</PARAM>
+</PARAM>
+<PARAM NAME="Decoding Globals" TYPE="NODE">
+<PARAM NAME="Severity" VALUE="Medium" TYPE="ENUM"  id="3"><ENUM NAME="Minimum" VALUE="0"></ENUM><ENUM NAME="Low" VALUE="1"></ENUM><ENUM NAME="Medium" VALUE="2"></ENUM><ENUM NAME="High" VALUE="3"></ENUM><ENUM NAME="Maximum" VALUE="4"></ENUM>
+</PARAM>
+<PARAM NAME="QuietZone" VALUE="Standard" TYPE="ENUM"  id="4"><ENUM NAME="Minimum" VALUE="0"></ENUM><ENUM NAME="Standard" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CodesPerScan" VALUE="1" TYPE="INTEGER"  id="93"><MIN>1</MIN><MAX>5</MAX><STEP>1</STEP>
+</PARAM>
+</PARAM>
+<PARAM NAME="Aiming" TYPE="NODE">
+<PARAM NAME="Aim Mode" VALUE="Timed Hold" TYPE="ENUM"  id="8388608"><ENUM NAME="Timed Hold" VALUE="0"></ENUM><ENUM NAME="Timed Release" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Aim Duration" VALUE="0" TYPE="INTEGER"  id="8388609"><MIN>0</MIN><MAX>5000</MAX><STEP>100</STEP>
+</PARAM>
+</PARAM>
+<PARAM NAME="Code39" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="5"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="6"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="7"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CipConversion" VALUE="Disabled" TYPE="ENUM"  id="8"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Standard" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="9"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="10"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="11"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="FullAscii" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="12"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="13"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="14"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Code32" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="15"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="16"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="17"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="RemoveA" VALUE="Enabled" TYPE="ENUM"  id="18"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+</PARAM>
+<PARAM NAME="TwoOfFive" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="19"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="20"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="21"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="Interleaved" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="22"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="23"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="24"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Industrial" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="25"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="26"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Enabled" TYPE="ENUM"  id="27"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Matrix" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="28"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="29"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="30"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Plessey" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="31"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="32"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="33"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="34"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="35"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="36"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Codabar" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="37"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="38"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="39"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="40"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Disabled" TYPE="ENUM"  id="41"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="42"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckInterDigit" VALUE="Disabled" TYPE="ENUM"  id="92"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Code128" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="43"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="44"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="45"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="Standard" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="46"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="47"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="48"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Ean" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="49"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="50"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="51"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="1st GroupSeparator" VALUE="Disabled" TYPE="ENUM"  id="90"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="GroupSeparatorByte" VALUE="29" TYPE="INTEGER"  id="91"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Code11" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="55"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="52"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="53"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="54"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="57"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckType" VALUE="C and K" TYPE="ENUM"  id="56"><ENUM NAME="C" VALUE="0"></ENUM><ENUM NAME="K" VALUE="1"></ENUM><ENUM NAME="C and K" VALUE="2"></ENUM><ENUM NAME="Disabled" VALUE="3"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Code93" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="61"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="58"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="59"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="60"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="63"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckType" VALUE="C and K" TYPE="ENUM"  id="62"><ENUM NAME="C" VALUE="0"></ENUM><ENUM NAME="K" VALUE="1"></ENUM><ENUM NAME="C and K" VALUE="2"></ENUM><ENUM NAME="Disabled" VALUE="3"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="MSI" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="67"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="64"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="0" TYPE="INTEGER"  id="65"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="0" TYPE="INTEGER"  id="66"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="69"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckType" VALUE="MOD 10" TYPE="ENUM"  id="68"><ENUM NAME="MOD 10" VALUE="0"></ENUM><ENUM NAME="MOD 10 / MOD 11" VALUE="1"></ENUM><ENUM NAME="MOD 10 / MOD 10" VALUE="2"></ENUM><ENUM NAME="Disabled" VALUE="3"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="UpcEan" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="70"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="Addon" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="71"><MIN>0</MIN><MAX>1</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="Two" VALUE="Disabled" TYPE="ENUM"  id="72"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Five" VALUE="Disabled" TYPE="ENUM"  id="73"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Autodiscriminate" VALUE="Disabled" TYPE="ENUM"  id="74"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="UpcA" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="75"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="76"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Enabled" TYPE="ENUM"  id="77"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="ToEan13" VALUE="Disabled" TYPE="ENUM"  id="78"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="UpcE" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="79"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="80"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Disabled" TYPE="ENUM"  id="81"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="Conversion" VALUE="ToEan13" TYPE="ENUM"  id="82"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="ToEan13" VALUE="1"></ENUM><ENUM NAME="ToUpcA" VALUE="2"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Ean8" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="83"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="84"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Enabled" TYPE="ENUM"  id="85"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="ToEan13" VALUE="Disabled" TYPE="ENUM"  id="86"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Ean13" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Enabled" TYPE="ENUM"  id="87"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckEvaluation" VALUE="Enabled" TYPE="ENUM"  id="88"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="CheckTransmission" VALUE="Enabled" TYPE="ENUM"  id="89"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+</PARAM>
+<PARAM NAME="GS1DataBar" TYPE="NODE">
+<PARAM NAME="Redundancy" VALUE="0" TYPE="INTEGER"  id="94"><MIN>0</MIN><MAX>7</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="GS1Omnidirectional" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="95"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="GS1Limited" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="97"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+<PARAM NAME="GS1Expanded" TYPE="NODE">
+<PARAM NAME="Decoder" VALUE="Disabled" TYPE="ENUM"  id="98"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="MinLength" VALUE="1" TYPE="INTEGER"  id="99"><MIN>0</MIN><MAX>74</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="MaxLength" VALUE="74" TYPE="INTEGER"  id="100"><MIN>0</MIN><MAX>74</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="GroupSeparatorByte" VALUE="29" TYPE="INTEGER"  id="104"><MIN>0</MIN><MAX>255</MAX><STEP>1</STEP>
+</PARAM>
+</PARAM>
+</PARAM>
+</PARAM>
+<PARAM NAME="Scan Parameters" TYPE="NODE" id="4">
+<PARAM NAME="ScanTimeout" VALUE="3000" TYPE="INTEGER"  id="67108865"><MIN>500</MIN><MAX>10000</MAX><STEP>500</STEP>
+</PARAM>
+<PARAM NAME="GoodReadSound" VALUE="" TYPE="STRING"  MIMETYPE="binHex" id="67109120">
+</PARAM>
+<PARAM NAME="LedDuration" VALUE="200" TYPE="INTEGER"  id="67108869"><MIN>0</MIN><MAX>200</MAX><STEP>10</STEP>
+</PARAM>
+<PARAM NAME="LedPulses" VALUE="1" TYPE="INTEGER"  id="67108868"><MIN>0</MIN><MAX>5</MAX><STEP>1</STEP>
+</PARAM>
+<PARAM NAME="GreenSpotDuration" VALUE="500" TYPE="INTEGER"  id="67108875"><MIN>0</MIN><MAX>10000</MAX><STEP>100</STEP>
+</PARAM>
+<PARAM NAME="ContinuousMode" VALUE="Disabled" TYPE="ENUM"  id="67108870"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="KeyboardEmulation" VALUE="no" TYPE="ENUM"  id="67108871"><ENUM NAME="no" VALUE="0"></ENUM><ENUM NAME="yes (keys)" VALUE="1"></ENUM><ENUM NAME="yes (clipboard)" VALUE="2"></ENUM>
+</PARAM>
+<PARAM NAME="SoftTrigger" VALUE="Disabled" TYPE="ENUM"  id="67108872"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="ScanAlwaysOn" VALUE="Enabled" TYPE="ENUM"  id="67108873"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM><ENUM NAME="DisableAfterRead" VALUE="2"></ENUM>
+</PARAM>
+<PARAM NAME="NotPrintableChar" VALUE="Remove" TYPE="ENUM"  id="67108877"><ENUM NAME="Leave" VALUE="0"></ENUM><ENUM NAME="Remove" VALUE="1"></ENUM>
+</PARAM>
+<PARAM NAME="ScanButton" VALUE="Enabled" TYPE="ENUM"  id="67108878"><ENUM NAME="Disabled" VALUE="0"></ENUM><ENUM NAME="Enabled" VALUE="1"></ENUM>
+</PARAM>
+</PARAM>
+</PARAM>

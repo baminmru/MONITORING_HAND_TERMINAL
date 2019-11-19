@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root Model="motorolla"  TerminalID="99900020" ClosePassword="1111"
+      ServiceURL2="http://192.168.1.102:8081/CMMon3Service.asmx"
+      ServiceURL="http://10.11.40.15:1085/CMMonitorService/CMMon3Service.asmx"
+      ServiceURL1="http://192.168.1.50:8081/CMMon2Service.asmx"
+      CHECKWLAN="1"
+      
+      >
+      
+ </root>
+

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config 
+Model1="motorolla"  
+Model="datalogic" 
+ServiceURL="http://10.11.40.15:1083/TSDUpdater.asmx"
+ServiceURL2="http://192.168.56.1:8081/TSDUpdater.asmx" 
+Version="2" 
+Subversion="0"
+> </config> 
